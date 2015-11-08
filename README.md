@@ -2,7 +2,7 @@
 
 ## How to use 
 
-Simply place the following in your HTML. 
+Simply place the following in your HTML. (If you choose to host the source yourself, you'll also need to modify the `wpPressThisButtonServer` variable.) 
 
 ```javascript
 <a href="#" id="reblog-this-button"></a>
