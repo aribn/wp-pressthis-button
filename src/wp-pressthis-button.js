@@ -71,7 +71,7 @@ function createModal() {
 		div.setAttribute('class', 'hidden');
 		var contents = '<a href="#" id="reblog-this-close-modal">x</a>';
 		contents		+= '<h3 id="reblog-this-url-prompt">Your Wordpress blog URL</h3>';
-		contents		+= '<input type="text" id="reblog-this-blog-url" value="" placeholder="e.g. http://fog.aribadernatal.com" size="40"/>';
+		contents		+= '<input type="text" id="reblog-this-blog-url" value="" placeholder="e.g. http://favorites.aribadernatal.com" size="40"/>';
 		contents		+= '<div id="reblog-this-highlight-prompt">Please select text to feature in your post.</div>';
 		contents		+= '<input id="reblog-this-continue" type="submit" value="Continue" />';
 		contents		+= '<input id="reblog-this-submit" type="submit" value="Reblog Selection" />';
