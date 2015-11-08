@@ -66,23 +66,24 @@ document.getElementById("reblog-this-button").addEventListener("click", function
 
 function createModal() {
 	if (!document.getElementById("reblog-this")) {
-		var div = document.createElement('div');
-		div.setAttribute('id', 'reblog-this');
-		div.setAttribute('class', 'hidden');
-		var contents = '<a href="#" id="reblog-this-close-modal">x</a>';
-		contents		+= '<h3 id="reblog-this-url-prompt">Your Wordpress blog URL</h3>';
-		contents		+= '<input type="text" id="reblog-this-blog-url" value="" placeholder="e.g. http://favorites.aribadernatal.com" size="40"/>';
-		contents		+= '<div id="reblog-this-highlight-prompt">Please select text to feature in your post.</div>';
-		contents		+= '<input id="reblog-this-continue" type="submit" value="Continue" />';
-		contents		+= '<input id="reblog-this-submit" type="submit" value="Reblog Selection" />';
-		div.innerHTML = contents;
-		document.getElementById("reblog-this-button").parentNode.appendChild(div);
-
 		var link = document.createElement('link');
 		link.rel = 'stylesheet';
 		link.type = "text/css";
 		link.href = wpPressThisButtonServer + '/wp-pressthis-button.css';
 		document.getElementsByTagName('head')[0].appendChild(link);		
+
+		var div = document.createElement('div');
+		div.setAttribute('id', 'reblog-this');
+		div.setAttribute('class', 'hidden');
+		document.getElementById("reblog-this-button").parentNode.appendChild(div);
+
+		var contents  = '<a href="#" id="reblog-this-close-modal">x</a>';
+		contents	 += '<h3 id="reblog-this-url-prompt">Your Wordpress blog URL</h3>';
+		contents	 += '<input type="text" id="reblog-this-blog-url" value="" placeholder="e.g. http://favorites.aribadernatal.com" size="40"/>';
+		contents	 += '<div id="reblog-this-highlight-prompt">Please select text to feature in your post.</div>';
+		contents	 += '<input id="reblog-this-continue" type="submit" value="Continue" />';
+		contents	 += '<input id="reblog-this-submit" type="submit" value="Reblog Selection" />';
+		document.getElementById("reblog-this").innerHTML = contents;
 	}
 }
 createModal();
