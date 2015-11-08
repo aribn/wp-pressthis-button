@@ -1,0 +1,83 @@
+
+#reblog-this-button {
+  float: right;
+  /*border:1px solid transparent;*/
+  padding:4px;
+  opacity:1;
+  margin-bottom:0;
+  display:inline-block;
+  width:32px;
+  height:32px;
+  background-image:url("https://s.w.org/about/images/logos/wordpress-logo-32.png");
+}
+#reblog-this-button:hover {
+  opacity:0.5;
+}
+
+#reblog-this {
+  width:350px;
+  margin:auto;
+  text-align:center;
+  position:fixed;
+  border:1px solid #ccc;
+  background-color:rgba(240,240,240,0.95);
+  padding:20px;
+  top: 25px;
+  right: 25px;
+}
+#reblog-this #reblog-this-close-modal {
+  position:absolute;
+  top:5px;
+  right:5px;
+  font-weight:bold;
+  font-family: sans-serif;
+}
+#reblog-this #reblog-this-submit, 
+#reblog-this #reblog-this-continue {
+  margin:10px 0 10px;
+  font-size:14px;
+  background-color:rgb(33, 117, 155);
+  padding:6px;
+  color:#FFF;
+  font-weight:bold;
+}
+#reblog-this #reblog-this-highlight-prompt {
+  font-size:14px;
+  font-family: sans-serif;  
+  margin:-5px 0 10px 0;
+  line-height:1.2;
+}
+#reblog-this #reblog-this-blog-url {
+  font-size:13px;
+  padding:4px;
+  text-align:center;
+}
+
+#reblog-this.hidden                               {        display: none;           }
+#reblog-this.hidden       #reblog-this-url-prompt {        display: none;           }
+#reblog-this.hidden       #reblog-this-blog-url {          display: none;           }
+#reblog-this.hidden       #reblog-this-highlight-prompt {  display: none;           }
+#reblog-this.hidden       #reblog-this-continue {          display: none;           }
+#reblog-this.hidden       #reblog-this-submit {            display: none;           }
+          
+#reblog-this.specify-blog                               {  display: block;          }
+#reblog-this.specify-blog #reblog-this-url-prompt {        display: block;          }
+#reblog-this.specify-blog #reblog-this-blog-url {          display: block;          }
+#reblog-this.specify-blog #reblog-this-highlight-prompt {  display: none;           }
+#reblog-this.specify-blog #reblog-this-continue {          display: inline-block;   }
+#reblog-this.specify-blog #reblog-this-submit {            display: none;           }
+          
+#reblog-this.select-text                               {   display: block;          }
+#reblog-this.select-text  #reblog-this-url-prompt {        display: none;           }
+#reblog-this.select-text  #reblog-this-blog-url {          display: none;           }
+#reblog-this.select-text  #reblog-this-highlight-prompt {  display: inline-block;   }
+#reblog-this.select-text  #reblog-this-continue {          display: none;           }
+#reblog-this.select-text  #reblog-this-submit {            display: none;           }
+              
+#reblog-this.press-this                               {    display: block;          }
+#reblog-this.press-this   #reblog-this-url-prompt {        display: none;           }
+#reblog-this.press-this   #reblog-this-blog-url {          display: none;           }
+#reblog-this.press-this   #reblog-this-highlight-prompt {  display: none;           }
+#reblog-this.press-this   #reblog-this-continue {          display: none;           }
+#reblog-this.press-this   #reblog-this-submit {            display: inline-block;   }
+  
