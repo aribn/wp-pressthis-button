@@ -6,8 +6,9 @@
   opacity:1;
   margin:5px 3px;
   display:inline-block;
-  width:62px;
-  height:12px;
+  width:65px;
+  height:15px;
+  background-size: 65px 15px;
   background-image:url("https://d3fstinwlv9okg.cloudfront.net/wp-pressthis-button.png");
 }
 #reblog-this-button:hover {
