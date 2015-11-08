@@ -49,18 +49,19 @@ document.getElementById("reblog-this-button").addEventListener("click", function
 	}
 
 	function addEventListeners() {
-		document.getElementById("reblog-this-continue"		).addEventListener("click", clickedContinue);
+		document.getElementById("reblog-this-continue"    ).addEventListener("click", clickedContinue);
 		document.getElementById("reblog-this-close-modal" ).addEventListener("click", hideModal); 
-		document.getElementById("reblog-this-submit"			).addEventListener("click", submitForm);
+		document.getElementById("reblog-this-submit"      ).addEventListener("click", submitForm);
 	}
 
 	function removeEventListeners() {
-		document.getElementById("reblog-this-continue"		).removeEventListener("click");
+		document.getElementById("reblog-this-continue"    ).removeEventListener("click");
 		document.getElementById("reblog-this-close-modal" ).removeEventListener("click");
-		document.getElementById("reblog-this-submit"			).removeEventListener("click");
+		document.getElementById("reblog-this-submit"      ).removeEventListener("click");
 		document.removeEventListener("selectionchange");
 	}
 
+	document.getElementById("reblog-this").style.opacity = 1;
 	showModal();
 }); 
 
@@ -75,6 +76,7 @@ function createModal() {
 		var div = document.createElement('div');
 		div.setAttribute('id', 'reblog-this');
 		div.setAttribute('class', 'hidden');
+		div.setAttribute('style', 'opacity:0;');
 		document.getElementById("reblog-this-button").parentNode.appendChild(div);
 
 		var contents  = '<a href="#" id="reblog-this-close-modal">x</a>';
