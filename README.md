@@ -12,7 +12,7 @@ This project extends Press This functionality in two ways:
 
 ## Demo
 
-I added the button to the post template on my Jekyll-based blog. Here you can see how to use it. 
+I incorporated this button in the post template of my Jekyll-based blog at https://aribadernatal.com. Here I pull a quote from an old blog post about ["fixed-effort" bicycle](https://aribadernatal.com/2008/05/29/the-nufixie-challenge-can-you-build-a-fixed-effort-bicycle-transmission/) concept. 
 
 ![](https://github.com/aribn/wp-pressthis-button/blob/master/wp-pressthis-button-demo.gif)
 
