@@ -61,12 +61,13 @@ document.getElementById("reblog-this-button").addEventListener("click", function
 		document.removeEventListener("selectionchange");
 	}
 
-	document.getElementById("reblog-this").style.opacity = 1;
+	document.getElementById("reblog-container").style.display = "block";
 	showModal();
 }); 
 
 function createModal() {
 	if (!document.getElementById("reblog-this")) {
+
 		var link = document.createElement('link');
 		link.rel = 'stylesheet';
 		link.type = "text/css";
@@ -74,18 +75,20 @@ function createModal() {
 		document.getElementsByTagName('head')[0].appendChild(link);		
 
 		var div = document.createElement('div');
-		div.setAttribute('id', 'reblog-this');
-		div.setAttribute('class', 'hidden');
-		div.setAttribute('style', 'opacity:0;');
-		document.getElementById("reblog-this-button").parentNode.appendChild(div);
+		div.setAttribute('id', 'reblog-container');
+		div.setAttribute('style', 'display:none;');
 
-		var contents  = '<a href="#" id="reblog-this-close-modal">x</a>';
+		var contents  = '<div id="reblog-this" class="hidden">';
+		contents     += '<a href="#" id="reblog-this-close-modal">x</a>';
 		contents	 += '<h3 id="reblog-this-url-prompt">Your Wordpress blog URL</h3>';
 		contents	 += '<input type="text" id="reblog-this-blog-url" value="" placeholder="e.g. http://favorites.aribadernatal.com" size="40"/>';
 		contents	 += '<div id="reblog-this-highlight-prompt">Please select text to feature in your post.</div>';
 		contents	 += '<input id="reblog-this-continue" type="submit" value="Continue" />';
 		contents	 += '<input id="reblog-this-submit" type="submit" value="Reblog Selection" />';
-		document.getElementById("reblog-this").innerHTML = contents;
+		contents     += '</div>';
+		div.innerHTML = contents;
+		
+		document.getElementById("reblog-this-button").parentNode.appendChild(div);
 	}
 }
 createModal();
