@@ -8,7 +8,10 @@
   width:65px;
   height:18px;
   background-size: 65px 18px;
-  background-image:url("https://d3fstinwlv9okg.cloudfront.net/wp-pressthis-button.png");
+  background-image:url("/wp-pressthis-button.png");
+   -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;
+   box-sizing: border-box; 
 }
 #reblog-this-button:hover {
   opacity:0.5;
@@ -24,6 +27,10 @@
   padding:20px;
   top: 25px;
   right: 25px;
+  font-family: sans-serif;
+  -webkit-box-shadow: -8px 8px 11px -5px rgba(0,0,0,0.25);
+  -moz-box-shadow: -8px 8px 11px -5px rgba(0,0,0,0.25);
+  box-shadow: -8px 8px 11px -5px rgba(0,0,0,0.25);
 }
 #reblog-this #reblog-this-close-modal {
   position:absolute;
@@ -31,6 +38,7 @@
   right:5px;
   font-weight:bold;
   font-family: sans-serif;
+  text-decoration:none;
 }
 #reblog-this #reblog-this-submit, 
 #reblog-this #reblog-this-continue {
@@ -50,7 +58,6 @@
 #reblog-this #reblog-this-blog-url {
   font-size:13px;
   padding:4px;
-  text-align:center;
 }
 
 #reblog-this.hidden                               {        display: none;           }
@@ -62,7 +69,7 @@
           
 #reblog-this.specify-blog                               {  display: block;          }
 #reblog-this.specify-blog #reblog-this-url-prompt {        display: block;          }
-#reblog-this.specify-blog #reblog-this-blog-url {          display: block;          }
+#reblog-this.specify-blog #reblog-this-blog-url {          display: block; width: 100% ;          }
 #reblog-this.specify-blog #reblog-this-highlight-prompt {  display: none;           }
 #reblog-this.specify-blog #reblog-this-continue {          display: inline-block;   }
 #reblog-this.specify-blog #reblog-this-submit {            display: none;           }
