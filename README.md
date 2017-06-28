@@ -12,7 +12,7 @@ This project extends Press This functionality in two ways:
 
 ## Demo
 
-I incorporated this button in the post template of my Jekyll-based blog at https://aribadernatal.com/blog. Here I pull a quote from an old blog post about a ["fixed-effort" bicycle concept.](https://aribadernatal.com/2008/05/29/the-nufixie-challenge-can-you-build-a-fixed-effort-bicycle-transmission/)
+You can try this yourself on any post on my blog, such as one describing a ["fixed-effort" bicycle concept.](https://aribadernatal.com/2008/05/29/the-nufixie-challenge-can-you-build-a-fixed-effort-bicycle-transmission/)
 
 ![](https://github.com/aribn/wp-pressthis-button/blob/master/wp-pressthis-button-demo.gif)
 
@@ -20,7 +20,7 @@ I incorporated this button in the post template of my Jekyll-based blog at https
 
 Simply add this to your HTML in the same way you would any other "Share" embed.
 
-```
+```html
 <div id="reblog-this-button"></div>
 <script>var wpPressThisButtonServer="https://d3fstinwlv9okg.cloudfront.net";</script>
 <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src=wpPressThisButtonServer+"/wp-pressthis-button.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"reblog-btn-js");</script>
@@ -34,6 +34,11 @@ I built this as a proof-of-concept based on a [tweet to Mike Caulfield.](https:/
 
 Store the contents of the `src` directory wherever you like, then change the `wpPressThisButtonServer` variable in the code snippet to match.
 
+## Develop
+
+Serve the button locally `cd src && python -m SimpleHTTPServer 8000` and open `http://localhost:8000/`
+
+
 ## License
 
-Builds on the Press This code from Wordpress, so [GPLv2](LICENSE).
+Builds on the [Press This](https://codex.wordpress.org/Press_This) code from Wordpress, so [GPLv2](LICENSE).
