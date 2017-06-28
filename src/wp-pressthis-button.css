@@ -25,8 +25,8 @@
   border:1px solid #ccc;
   background-color:rgba(240,240,240,0.95);
   padding:20px;
-  top: 25px;
-  right: 25px;
+  top: 10px;
+  right: 10px;
   font-family: sans-serif;
   -webkit-box-shadow: -8px 8px 11px -5px rgba(0,0,0,0.25);
   -moz-box-shadow: -8px 8px 11px -5px rgba(0,0,0,0.25);
@@ -87,4 +87,22 @@
 #reblog-this.press-this   #reblog-this-highlight-prompt {  display: none;           }
 #reblog-this.press-this   #reblog-this-continue {          display: none;           }
 #reblog-this.press-this   #reblog-this-submit {            display: inline-block;   }
+
+#reblog-this ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    #ccc;
+}
+#reblog-this :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #ccc;
+  opacity:  1;
+}
+#reblog-this ::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #ccc;
+  opacity:  1;
+}
+#reblog-this :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    #ccc;
+}
+#reblog-this ::-ms-input-placeholder { /* Microsoft Edge */
+  color:    #ccc;
+}
   
