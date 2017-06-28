@@ -16,19 +16,18 @@ You can try this yourself on any post on my blog, such as one describing a ["fix
 
 ![](https://github.com/aribn/wp-pressthis-button/blob/master/wp-pressthis-button-demo.gif)
 
+## Why
+
+I built this as a proof-of-concept based on a [tweet to Mike Caulfield.](https://twitter.com/aribadernatal/status/657060037320245248)
+
 ## Usage
 
 Simply add this to your HTML in the same way you would any other "Share" embed.
 
 ```html
 <div id="reblog-this-button"></div>
-<script>var wpPressThisButtonServer="https://d3fstinwlv9okg.cloudfront.net";</script>
-<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src=wpPressThisButtonServer+"/wp-pressthis-button.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"reblog-btn-js");</script>
+<script type="text/javascript">var wpPressThisButtonServer="https://d3fstinwlv9okg.cloudfront.net";!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src=wpPressThisButtonServer+"/wp-pressthis-button.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"reblog-btn-js");</script>
 ```
-
-## Why
-
-I built this as a proof-of-concept based on a [tweet to Mike Caulfield.](https://twitter.com/aribadernatal/status/657060037320245248)
 
 ## Self-host
 
