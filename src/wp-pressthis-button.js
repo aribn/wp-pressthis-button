@@ -1,6 +1,6 @@
 
-
-document.getElementById("reblog-this-button").addEventListener("click", function() {
+function reblogThisButtonClickHandler(e) {
+	e.preventDefault();
 
 	var clickedContinueHandler = null;
 	var hideModalHandler = null;
@@ -20,23 +20,23 @@ document.getElementById("reblog-this-button").addEventListener("click", function
 	}
 
 	function showModal() {
-		if (localStorage.getItem('url')) 
-			document.getElementById("reblog-selection-blog-url").value = localStorage.getItem('url'); 
-		setState("specify-blog"); 
+		if (localStorage.getItem('url')) {
+			document.getElementById("reblog-selection-blog-url").value = localStorage.getItem('url');
+		}
+		setState("specify-blog");
 		document.getElementById("reblog-selection-blog-url").focus();
-		addEventListeners();	 
+		addEventListeners();
 	}
 
 	function hideModal() {
-	setState("hidden"); 
+		setState("hidden"); 
 		document.getElementById("reblog-selection-blog-url").blur();		
 		removeEventListeners(); 
 	}
 
 	document.getElementById('reblog-selection-blog-url').onkeydown = function(e){
-	   if(e.keyCode == 13){
-	     submitForm();
-	   }
+		e.preventDefault();
+	  if(e.keyCode == 13) clickedContinue();
 	};
 
 	function submitForm() {
@@ -55,14 +55,14 @@ document.getElementById("reblog-this-button").addEventListener("click", function
 		selectionChangedHandler = document.addEventListener("selectionchange", selectionChanged);
 	}
 
-	function selectionChanged() { 
+	function selectionChanged(e) { 
 		if (getState() == "select-text") setState("press-this");		 
 	}
 
 	function addEventListeners() {
 		clickedContinueHandler 	= document.getElementById("reblog-selection-continue"    ).addEventListener("click", clickedContinue);
-		hideModalHandler 		= document.getElementById("reblog-selection-close-modal" ).addEventListener("click", hideModal);
-		submitFormHandler 		= document.getElementById("reblog-selection-submit"      ).addEventListener("click", submitForm);
+		hideModalHandler 				= document.getElementById("reblog-selection-close-modal" ).addEventListener("click", hideModal);
+		submitFormHandler 			= document.getElementById("reblog-selection-submit"      ).addEventListener("click", submitForm);
 	}
 
 	function removeEventListeners() {
@@ -74,7 +74,7 @@ document.getElementById("reblog-this-button").addEventListener("click", function
 
 	document.getElementById("reblog-container").style.display = "block";
 	showModal();
-}); 
+}
 
 function createModal() {
 	if (!document.getElementById("reblog-selection")) {
@@ -102,5 +102,9 @@ function createModal() {
 		document.getElementById("reblog-this-button").parentNode.appendChild(div);
 	}
 }; 
+
+
+document.getElementById("reblog-this-button").addEventListener("click", reblogThisButtonClickHandler); 
+
 createModal();
 
