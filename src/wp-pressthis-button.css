@@ -17,7 +17,7 @@
   opacity:0.5;
 }
 
-#reblog-this {
+#reblog-selection {
   width:350px;
   margin:auto;
   text-align:center;
@@ -32,7 +32,7 @@
   -moz-box-shadow: -8px 8px 11px -5px rgba(0,0,0,0.25);
   box-shadow: -8px 8px 11px -5px rgba(0,0,0,0.25);
 }
-#reblog-this #reblog-this-close-modal {
+#reblog-selection #reblog-selection-close-modal {
   position:absolute;
   top:5px;
   right:5px;
@@ -40,8 +40,8 @@
   font-family: sans-serif;
   text-decoration:none;
 }
-#reblog-this #reblog-this-submit, 
-#reblog-this #reblog-this-continue {
+#reblog-selection #reblog-selection-submit, 
+#reblog-selection #reblog-selection-continue {
   margin:10px 0 10px;
   font-size:14px;
   background-color:rgb(33, 117, 155);
@@ -49,60 +49,60 @@
   color:#FFF;
   font-weight:bold;
 }
-#reblog-this #reblog-this-highlight-prompt {
+#reblog-selection #reblog-selection-highlight-prompt {
   font-size:14px;
   font-family: sans-serif;  
   margin:-5px 0 10px 0;
   line-height:1.2;
 }
-#reblog-this #reblog-this-blog-url {
+#reblog-selection #reblog-selection-blog-url {
   font-size:13px;
   padding:4px;
 }
 
-#reblog-this.hidden                               {        display: none;           }
-#reblog-this.hidden       #reblog-this-url-prompt {        display: none;           }
-#reblog-this.hidden       #reblog-this-blog-url {          display: none;           }
-#reblog-this.hidden       #reblog-this-highlight-prompt {  display: none;           }
-#reblog-this.hidden       #reblog-this-continue {          display: none;           }
-#reblog-this.hidden       #reblog-this-submit {            display: none;           }
+#reblog-selection.hidden                               {        display: none;           }
+#reblog-selection.hidden       #reblog-selection-url-prompt {        display: none;           }
+#reblog-selection.hidden       #reblog-selection-blog-url {          display: none;           }
+#reblog-selection.hidden       #reblog-selection-highlight-prompt {  display: none;           }
+#reblog-selection.hidden       #reblog-selection-continue {          display: none;           }
+#reblog-selection.hidden       #reblog-selection-submit {            display: none;           }
           
-#reblog-this.specify-blog                               {  display: block;          }
-#reblog-this.specify-blog #reblog-this-url-prompt {        display: block;          }
-#reblog-this.specify-blog #reblog-this-blog-url {          display: block; width: 100% ;          }
-#reblog-this.specify-blog #reblog-this-highlight-prompt {  display: none;           }
-#reblog-this.specify-blog #reblog-this-continue {          display: inline-block;   }
-#reblog-this.specify-blog #reblog-this-submit {            display: none;           }
+#reblog-selection.specify-blog                               {  display: block;          }
+#reblog-selection.specify-blog #reblog-selection-url-prompt {        display: block;          }
+#reblog-selection.specify-blog #reblog-selection-blog-url {          display: block; width: 100% ;          }
+#reblog-selection.specify-blog #reblog-selection-highlight-prompt {  display: none;           }
+#reblog-selection.specify-blog #reblog-selection-continue {          display: inline-block;   }
+#reblog-selection.specify-blog #reblog-selection-submit {            display: none;           }
           
-#reblog-this.select-text                               {   display: block;          }
-#reblog-this.select-text  #reblog-this-url-prompt {        display: none;           }
-#reblog-this.select-text  #reblog-this-blog-url {          display: none;           }
-#reblog-this.select-text  #reblog-this-highlight-prompt {  display: inline-block;   }
-#reblog-this.select-text  #reblog-this-continue {          display: none;           }
-#reblog-this.select-text  #reblog-this-submit {            display: none;           }
+#reblog-selection.select-text                               {   display: block;          }
+#reblog-selection.select-text  #reblog-selection-url-prompt {        display: none;           }
+#reblog-selection.select-text  #reblog-selection-blog-url {          display: none;           }
+#reblog-selection.select-text  #reblog-selection-highlight-prompt {  display: inline-block;   }
+#reblog-selection.select-text  #reblog-selection-continue {          display: none;           }
+#reblog-selection.select-text  #reblog-selection-submit {            display: none;           }
               
-#reblog-this.press-this                               {    display: block;          }
-#reblog-this.press-this   #reblog-this-url-prompt {        display: none;           }
-#reblog-this.press-this   #reblog-this-blog-url {          display: none;           }
-#reblog-this.press-this   #reblog-this-highlight-prompt {  display: none;           }
-#reblog-this.press-this   #reblog-this-continue {          display: none;           }
-#reblog-this.press-this   #reblog-this-submit {            display: inline-block;   }
+#reblog-selection.press-this                               {    display: block;          }
+#reblog-selection.press-this   #reblog-selection-url-prompt {        display: none;           }
+#reblog-selection.press-this   #reblog-selection-blog-url {          display: none;           }
+#reblog-selection.press-this   #reblog-selection-highlight-prompt {  display: none;           }
+#reblog-selection.press-this   #reblog-selection-continue {          display: none;           }
+#reblog-selection.press-this   #reblog-selection-submit {            display: inline-block;   }
 
-#reblog-this ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+#reblog-selection ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color:    #ccc;
 }
-#reblog-this :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  color:    #ccc;
-  opacity:  1;
-}
-#reblog-this ::-moz-placeholder { /* Mozilla Firefox 19+ */
+#reblog-selection :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
   color:    #ccc;
   opacity:  1;
 }
-#reblog-this :-ms-input-placeholder { /* Internet Explorer 10-11 */
+#reblog-selection ::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #ccc;
+  opacity:  1;
+}
+#reblog-selection :-ms-input-placeholder { /* Internet Explorer 10-11 */
   color:    #ccc;
 }
-#reblog-this ::-ms-input-placeholder { /* Microsoft Edge */
+#reblog-selection ::-ms-input-placeholder { /* Microsoft Edge */
   color:    #ccc;
 }
   
