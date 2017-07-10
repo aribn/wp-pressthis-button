@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>An example</title>
+		<title>Example demonstrating the WP Reblogger</title>
 		<style>
 			body {
 				background-color:#eee;
@@ -12,32 +12,58 @@
 				padding:20px;
 				border:1px solid #ccc;
 			}
+
+			.arrow_box {
+			  width: calc(100% - 125px);
+			  padding: 4px;
+			  color:#000;
+			  font-family: 'Open Sans', "Helvetica Neue", sans-serif;
+			  font-weight: bold;
+			}
+
+			.arrow_box {
+				position: relative;
+				background: #fff;
+				border: 4px solid #eee;
+
+			}
+			.arrow_box:after, .arrow_box:before {
+				left: 100%;
+				top: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+			}
+
+			.arrow_box:after {
+				border-color: rgba(136, 183, 213, 0);
+				border-left-color: #fff;
+				border-width: 28px;
+				margin-top: -28px;
+			}
+			.arrow_box:before {
+				border-color: rgba(194, 225, 245, 0);
+				border-left-color: #eee;
+				border-width: 34px;
+				margin-top: -34px;
+			}
 		</style>
+		<script src="/lorem.js"></script>
 	</head>
 	<body>
 		<div class="container">
 
 
-			<div id="reblog-this-button"></div>
+
+			<div id="reblog-this-button" unselectable="on" class="unselectable"></div>
 			<script type="text/javascript">var wpPressThisButtonServer="";!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src=wpPressThisButtonServer+"/wp-pressthis-button.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"reblog-btn-js");</script>
-
-
-			<p>
-				How to:
-				<ol>
-					<li>Start by clicking the "WordPress" button at right.</li>
-					<li>Enter the URL of your WordPress site.</li>
-					<li>Use the cursor to select some text from the page.</li>
-					<li>Click "Reblog Selection"</li>
-				</ol>
-			</p>
 			
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-			</p>
-			<p>
-				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-			</p>
+			<div class="arrow_box">Click "Reblog" button to get started. ==> </div>
+
+			<div data-lorem="5p"></div>
 		</div>
 
 
