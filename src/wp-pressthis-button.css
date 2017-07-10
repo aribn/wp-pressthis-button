@@ -1,92 +1,126 @@
 
+#reblog-selection {
+  width:100%;
+  margin:0 auto;
+  box-sizing: border-box;
+  position:fixed;
+  border-bottom:1px solid #666;
+  background-color:rgba(240,240,240,0.95);
+  padding:2px;
+  top:0px;
+  left: 0px;
+  font-family: 'Open Sans', "Helvetica Neue", sans-serif;
+  -webkit-box-shadow: -8px 8px 11px -5px rgba(0,0,0,0.25);
+  -moz-box-shadow: -8px 8px 11px -5px rgba(0,0,0,0.25);
+  box-shadow: -8px 8px 11px -5px rgba(0,0,0,0.25);
+  text-align:center;
+}
+
+#reblog-selection input#reblog-selection-blog-url {
+  vertical-align: top;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.reblog-button {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+  white-space: nowrap;
+  font-family: 'Open Sans', "Helvetica Neue", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+}
+
+.reblog-button a {
+  text-decoration: none;
+  color: #fff;
+  background: #2ea2cc;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 0 6px 0 4px;
+  white-space: nowrap;
+  height: 20px;
+  display: inline-block;
+  line-height: 2px;
+}
+
+#reblog-selection.active #reblog-selection-submit.reblog-button a {
+  background: #2ea2cc;
+} 
+#reblog-selection.active #reblog-selection-submit.reblog-button a:hover {
+  background: #1e8cbe;
+}
+
+#reblog-selection.inactive #reblog-selection-submit.reblog-button a {
+  background: #999;
+  cursor: not-allowed;
+} 
+
+.reblog-button a:hover {
+  background: #1e8cbe;
+}
+
+.reblog-button-logo {
+  position: relative;
+  top: 3px;
+  margin-right: 3px;
+}
+
 #reblog-this-button {
+  color:#FFF;
   float: right;
   padding:4px;
   opacity:1;
   margin:5px 3px;
   display:inline-block;
-  width:65px;
-  height:18px;
-  background-size: 65px 18px;
-  background-image:url("/wp-pressthis-button.png");
+  width:57px;
+  height:20px;
    -webkit-box-sizing: border-box; 
   -moz-box-sizing: border-box;
    box-sizing: border-box; 
 }
-#reblog-this-button:hover {
-  opacity:0.5;
+
+#reblog-selection #url-label {
+  font-size: 11px;
+  display: inline-block;
+  padding-top: 8px;
+  color: #999;
 }
 
-#reblog-selection {
-  width:350px;
-  margin:auto;
-  text-align:center;
-  position:fixed;
-  border:1px solid #ccc;
-  background-color:rgba(240,240,240,0.95);
-  padding:20px;
-  top: 10px;
-  right: 10px;
-  font-family: sans-serif;
-  -webkit-box-shadow: -8px 8px 11px -5px rgba(0,0,0,0.25);
-  -moz-box-shadow: -8px 8px 11px -5px rgba(0,0,0,0.25);
-  box-shadow: -8px 8px 11px -5px rgba(0,0,0,0.25);
-}
 #reblog-selection #reblog-selection-close-modal {
   position:absolute;
-  top:5px;
+  top:2px;
   right:5px;
   font-weight:bold;
   font-family: sans-serif;
   text-decoration:none;
-}
-#reblog-selection #reblog-selection-submit, 
-#reblog-selection #reblog-selection-continue {
-  margin:10px 0 10px;
-  font-size:14px;
-  background-color:rgb(33, 117, 155);
-  padding:6px;
-  color:#FFF;
-  font-weight:bold;
-}
-#reblog-selection #reblog-selection-highlight-prompt {
-  font-size:14px;
-  font-family: sans-serif;  
-  margin:-5px 0 10px 0;
-  line-height:1.2;
-}
-#reblog-selection #reblog-selection-blog-url {
-  font-size:13px;
-  padding:4px;
+  color: #07C;
+  cursor:pointer;
 }
 
-#reblog-selection.hidden                               {        display: none;           }
-#reblog-selection.hidden       #reblog-selection-url-prompt {        display: none;           }
-#reblog-selection.hidden       #reblog-selection-blog-url {          display: none;           }
-#reblog-selection.hidden       #reblog-selection-highlight-prompt {  display: none;           }
-#reblog-selection.hidden       #reblog-selection-continue {          display: none;           }
-#reblog-selection.hidden       #reblog-selection-submit {            display: none;           }
-          
-#reblog-selection.specify-blog                               {  display: block;          }
-#reblog-selection.specify-blog #reblog-selection-url-prompt {        display: block;          }
-#reblog-selection.specify-blog #reblog-selection-blog-url {          display: block; width: 100% ;          }
-#reblog-selection.specify-blog #reblog-selection-highlight-prompt {  display: none;           }
-#reblog-selection.specify-blog #reblog-selection-continue {          display: inline-block;   }
-#reblog-selection.specify-blog #reblog-selection-submit {            display: none;           }
-          
-#reblog-selection.select-text                               {   display: block;          }
-#reblog-selection.select-text  #reblog-selection-url-prompt {        display: none;           }
-#reblog-selection.select-text  #reblog-selection-blog-url {          display: none;           }
-#reblog-selection.select-text  #reblog-selection-highlight-prompt {  display: inline-block;   }
-#reblog-selection.select-text  #reblog-selection-continue {          display: none;           }
-#reblog-selection.select-text  #reblog-selection-submit {            display: none;           }
-              
-#reblog-selection.press-this                               {    display: block;          }
-#reblog-selection.press-this   #reblog-selection-url-prompt {        display: none;           }
-#reblog-selection.press-this   #reblog-selection-blog-url {          display: none;           }
-#reblog-selection.press-this   #reblog-selection-highlight-prompt {  display: none;           }
-#reblog-selection.press-this   #reblog-selection-continue {          display: none;           }
-#reblog-selection.press-this   #reblog-selection-submit {            display: inline-block;   }
+#reblog-selection #reblog-selection-submit {
+  cursor:pointer;
+  margin: 10px 0;
+  font-size: 12px;
+  text-align: left;
+}
+
+
+#reblog-selection #content-selection {
+  min-height: 0px;
+  text-align: left;
+  padding: 0px 10px;
+  font-size: 12px;
+  border-left: 3px solid #666;
+  margin: 10px 0;
+  font-style: italic;
+  max-height: 100px;
+  overflow-y: scroll;
+  background: #ddd;
+}
 
 #reblog-selection ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color:    #ccc;
@@ -105,4 +139,31 @@
 #reblog-selection ::-ms-input-placeholder { /* Microsoft Edge */
   color:    #ccc;
 }
-  
+
+.unselectable {
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+#reblog-selection #content-container {
+  box-sizing: border-box;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#reblog-selection #source {
+  display: none;
+  text-align:left;
+  font-size: 12px;
+  color:#999;
+}
+
+.select-prompt {
+  padding: 10px 0;
+  font-style: normal;
+  font-weight: bold;
+  color: red;
+}
