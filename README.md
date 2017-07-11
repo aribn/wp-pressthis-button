@@ -35,11 +35,11 @@ Serve the button locally `cd src && python -m SimpleHTTPServer 8000` and open `h
 
 You can try this yourself on any post on my blog, such as one describing a ["fixed-effort" bicycle concept.](https://aribadernatal.com/2008/05/29/the-nufixie-challenge-can-you-build-a-fixed-effort-bicycle-transmission/)
 
-![](https://github.com/aribn/wp-pressthis-button/blob/master/wp-pressthis-button-demo-2.gif)
+![](https://github.com/aribn/wp-pressthis-button/blob/master/img/wp-pressthis-button-demo-2.gif)
 
 The blog URL is saved, so subsequent uses are streamlined: 
 
-![](https://github.com/aribn/wp-pressthis-button/blob/master/wp-pressthis-button-demo-3.gif)
+![](https://github.com/aribn/wp-pressthis-button/blob/master/img/wp-pressthis-button-demo-3.gif)
 
 ## License
 
