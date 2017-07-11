@@ -25,13 +25,13 @@ I built this as a proof-of-concept based on a [tweet to Mike Caulfield.](https:/
 Simply add this to your HTML in the same way you would any other "Share" embed.
 
 ```html
-<div id="reblog-this-button"></div>
-<script type="text/javascript">var wpPressThisButtonServer="https://d3fstinwlv9okg.cloudfront.net";!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src=wpPressThisButtonServer+"/wp-pressthis-button.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"reblog-btn-js");</script>
+<div id="reblog-this-button" unselectable="on" class="unselectable"></div>
+<script type="text/javascript">var wpPressThisButtonServer="";!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src=wpPressThisButtonServer+"/wp-pressthis-button.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"reblog-btn-js");</script>
 ```
 
 ## Self-host
 
-Store the contents of the `src` directory wherever you like, then change the `wpPressThisButtonServer` variable in the code snippet to match.
+Store the contents of the `src` directory wherever you like, then change the `wpPressThisButtonServer` variable in the code snippet to match the hosting location.
 
 ## Develop
 
