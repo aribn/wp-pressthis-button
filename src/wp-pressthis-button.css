@@ -5,7 +5,7 @@
   box-sizing: border-box;
   position:fixed;
   border-bottom:1px solid #666;
-  background-color:rgba(240,240,240,0.95);
+  background-color:rgb(240,240,240);
   padding:2px;
   top:0px;
   left: 0px;
@@ -14,6 +14,7 @@
   -moz-box-shadow: -8px 8px 11px -5px rgba(0,0,0,0.25);
   box-shadow: -8px 8px 11px -5px rgba(0,0,0,0.25);
   text-align:center;
+  line-height: 1;
 }
 
 #reblog-selection input#reblog-selection-blog-url {
@@ -88,6 +89,7 @@
   display: inline-block;
   padding-top: 8px;
   color: #999;
+  vertical-align: top;
 }
 
 #reblog-selection #reblog-selection-close-modal {
@@ -108,6 +110,9 @@
   text-align: left;
 }
 
+#reblog-selection #content-selection h1, #reblog-selection #content-selection h2, #reblog-selection #content-selection h3, #reblog-selection #content-selection h4, #reblog-selection #content-selection h5, #reblog-selection #content-selection h6, #reblog-selection #content-selection p, #reblog-selection #content-selection ul, #reblog-selection #content-selection ol, #reblog-selection #content-selection dl, #reblog-selection #content-selection blockquote, #reblog-selection #content-selection table, #reblog-selection #content-selection img, #reblog-selection #content-selection hr {
+  margin-bottom:0 !important;
+}
 
 #reblog-selection #content-selection {
   min-height: 0px;
@@ -120,6 +125,7 @@
   max-height: 100px;
   overflow-y: scroll;
   background: #ddd;
+  line-height: 1.1 !important;
 }
 
 #reblog-selection ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
